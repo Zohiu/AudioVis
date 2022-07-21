@@ -1,0 +1,57 @@
+import kivy
+from kivy.app import App
+from kivy.uix.label import Label
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.textinput import TextInput
+
+from kivy.config import Config
+kivy.require('1.9.0')
+Config.set('graphics', 'width', '600')
+Config.set('graphics', 'height', '800')
+Config.write()
+
+
+class mainWindow(App):
+    running = True
+
+    def disable(self, instance, *args):
+
+        instance.disabled = True
+
+    def update(self, instance, *args):
+
+        instance.text = "I am Disabled!"
+
+    def build(self):
+        return MyGrid()
+
+
+class MyGrid(GridLayout):
+    def __init__(self, **kwargs):
+        super(MyGrid, self).__init__(**kwargs)
+        self.cols = 1  # Set columns for main layout
+
+        self.submit = Label(text="Submit", font_size=40)
+
+        self.add_widget(self.submit)
+
+        self.inside = GridLayout()  # Create a new grid layout
+        self.inside.cols = 2  # set columns for the new grid layout
+
+        # ALL OF THESE ARE APART OF THE (INTERIOR)NEW LAYOUT
+        self.inside.add_widget(Label(text="First Name: "))
+        self.name = TextInput(multiline=False)
+        self.inside.add_widget(self.name)
+
+        self.inside.add_widget(Label(text="Last Name: "))
+        self.lastName = TextInput(multiline=False)
+        self.inside.add_widget(self.lastName)
+
+        self.inside.add_widget(Label(text="Email: "))
+        self.email = TextInput(multiline=False)
+        self.inside.add_widget(self.email)
+        # -------------------------------------------------
+
+        self.add_widget(self.inside)  # Add the interior layout to the main
+
+# Command: qt5-tools designer

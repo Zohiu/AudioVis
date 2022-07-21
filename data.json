@@ -1,0 +1,10 @@
+{
+  "AppName":  "AudioVis",
+  "FPS":  60,
+  "Audio":
+  {
+    "CHUNK":  1024,
+    "RATE": 44100,
+    "CHANNELS": 1
+  }
+}
