@@ -1,4 +1,4 @@
-AudioVis - Your real-time python music visualizer!
+# AudioVis - Your real-time python music visualizer!
 WARNING! This is not finished at all! A lot of the stuff I wrote here is just stuff I planned to add.
 Only use this if you know how to. I won't be giving any support at the current state. I also don't know if I'll ever finish this.
 
