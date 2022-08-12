@@ -133,3 +133,5 @@ Yeah basic stuff like always. You are allowed to use this however you want, Modi
 You are not allowed to distribute this as your own.
 You do not get any warranty. I am just putting this thing out and am not liable for anything
 If you agree to this, well go ahead and download it. Else, Well don't download it then I guess.
+
+## More projects: https://zohiu.de/projects/  
